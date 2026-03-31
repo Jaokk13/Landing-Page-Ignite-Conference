@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+ <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' https://cdnjs.cloudflare.com;
+  style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+  img-src 'self' data:;
+  frame-src https://www.google.com;
+  connect-src 'self';
+">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignite Conference 2025</title>
+
+  <link rel="icon" type="image/png" href="favcons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favcons/favicon.svg" />
+  <link rel="shortcut icon" href="favcons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favcons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Marcados" />
+  <link rel="manifest" href="favcons/site.webmanifest" />
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+  </head>
+<body>
+  <header class="main-header">
+    <nav class="main-nav">
+      <div class="nav-logos-left">
+        <a href="https://www.adna.com.br/departament/adna-jovem/" target="_blank" rel="noopener noreferrer" class="nav-logo-link">
+          <img src="imagens/logo aj.png" alt="Logo ADNA Jovem" class="nav-logo">
+        </a>
+        <a href="https://www.adna.com.br" target="_blank" rel="noopener noreferrer" class="nav-logo-link">
+          <img src="imagens/logo adna.png" alt="Logo ADNA Central" class="nav-logo">
+        </a>
+        <a href="https://www.adna.com.br/inscricao-ignate-school/" target="_blank" rel="noopener noreferrer" class="nav-logo-link">
+          <img src="imagens/logo ignite.png" alt="Logo IGNITE" class="nav-logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#secao-principal">MARCADOS</a></li>
+        <li><a href="#cronograma-section">CRONOGRAMA</a></li>
+        <li><a href="#faq-section">PERGUNTAS</a></li>
+        <li><a href="#local-section">LOCAL</a></li>
+        <li class="nav-cta-item"><a href="#inscricao-final" class="nav-cta">INSCREVA-SE</a></li>
+      </ul>
+  <div class="nav-logo-right">
+    <a href="#inicio" aria-label="Voltar ao topo">
+      <img src="imagens/logo_ignite-conference.png" alt="Logo IGNITE Conference" class="nav-logo">
+    </a>
+  </div>
+    </nav>
+  </header>
+
+  <div class="video-hero" id="inicio">
+    <video autoplay muted loop playsinline class="bg-video" poster="imagens/fallback.jpg">
+      <source src="imagens/bg-video.mp4" type="video/mp4">
+      <img src="imagens/fallback.jpg" alt="Background do evento">
+    </video>
+    <div class="hero-content">
+      <img src="imagens/selo marcados.png" alt="Selo Marcados" class="hero-logo">
+      <a href="#secao-principal" class="btn-veja-mais">
+        VEJA MAIS <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </div>
+
+  <section class="section imagem-conjunta-section" id="secao-principal">
+    <img src="imagens/imagem conjunta.png" alt="Não se trata apenas de um culto, Marcados para um propósito, Dias 25, 26 e 27 de julho - ADNA Central - Cuiabá/MT" class="imagem-conjunta">
+  </section>
+
+  <section class="section cronograma-section" id="cronograma-section">
+  <h2>CRONOGRAMA</h2>
+  
+  <div class="cronograma-interativo-container">
+    <div class="tabs-cronograma">
+      <button class="tab-button active" data-day="sexta">Sexta – 25/07</button>
+      <button class="tab-button" data-day="sabado">Sábado – 26/07</button>
+      <button class="tab-button" data-day="domingo">Domingo – 27/07</button>
+    </div>
+
+    <div class="tab-content-cronograma">
+      <div class="tab-pane active" id="sexta">
+        <ul class="lista-eventos">
+          <li class="evento-item">
+            <span class="horario">19h30</span>
+            <span class="evento-descricao">Culto de Abertura </span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="tab-pane" id="sabado">
+        <ul class="lista-eventos">
+          <li class="evento-item">
+            <span class="horario">08h00</span>
+            <span class="evento-descricao">Devocional da Manhã </span>
+          </li>
+          <li class="evento-item">
+            <span class="horario">09h00</span>
+            <span class="evento-descricao">Culto da Manhã </span>
+          </li>
+          <li class="evento-item">
+            <span class="horario">14h00</span>
+            <span class="evento-descricao">Culto da Tarde </span>
+          </li>
+          <li class="evento-item">
+            <span class="horario">19h30</span>
+            <span class="evento-descricao">Culto da Noite </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="domingo">
+        <ul class="lista-eventos">
+          <li class="evento-item">
+            <span class="horario">08h00</span>
+            <span class="evento-descricao">Devocional da Manhã </span>
+          </li>
+          <li class="evento-item">
+            <span class="horario">09h00</span>
+            <span class="evento-descricao">Culto de Encerramento </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section faq-section" id="faq-section">
+  <h2>PERGUNTAS FREQUENTES</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Onde acontecerá o evento?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>O evento será realizado na Assembleia de Deus Nova Aliança (ADNA), na Rua Gregório de Matos Guerra, 10, Cuiabá/MT.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        O que está incluso na inscrição?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>A inscrição cobre a participação nos três dias de evento e a alimentação durante o período da conferência.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Menores de 16 anos podem participar?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim, o evento é destinado a adolescentes e jovens. Menores de 16 anos podem participar, desde que estejam devidamente inscritos.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Posso levar meus filhos pequenos?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim, você pode levar. No entanto, não haverá atividades específicas para crianças durante o evento.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Como funciona a inscrição em caravanas?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Todos os participantes devem se inscrever individualmente. Após a inscrição, o responsável pela caravana deve entrar em contato com o setor de Credenciamento para o cadastro coletivo, que é válido para grupos com mais de 10 pessoas.
+          <br><br>
+          <strong>Canais de contato:</strong><br>
+          Roney: (65) 98422-1009<br>
+          E-mail: adnajovem@adna.com.br
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Posso cancelar minha inscrição?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Em caso de desistência, entre em contato com a administração do evento, pois cada caso será analisado individualmente.
+          <br><br>
+          <strong>Contato para cancelamento:</strong><br>
+          Roney: (65) 98422-1009<br>
+          E-mail: adnajovem@adna.com.br
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Como será o credenciamento no dia do evento?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          O check-in será realizado no local do evento, mediante apresentação do ingresso (impresso ou digital) ou de um documento com foto. Para caravanas, apenas o líder do grupo deverá se dirigir à equipe de credenciamento para retirar os materiais de todos os participantes. Isso agiliza o processo e evita filas.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <section class="section local-section" id="local-section">
+    <h2>LOCAL DO EVENTO</h2>
+    <div class="mapa-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.6423349997335!2d-56.055452924090474!3d-15.61074698500424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db020dac01b6f%3A0x5fe0edcbd734fed4!2sASSEMBLEIA%20DE%20DEUS%20NOVA%20ALIAN%C3%87A%20-%20ADNA!5e0!3m2!1spt-BR!2sbr!4v1749429457371!5m2!1spt-BR!2sb" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        sandbox="allow-scripts allow-popups allow-same-origin">
+      </iframe>
+      </div>
+  </section>
+
+  <section class="cta-section" id="inscricao-final">
+     <a href="https://adna.pagtickets.com.br/marcados-ignit-conference25__16357/" class="btn-inscrever" target="_blank" rel="noopener noreferrer"><strong>INSCREVA-SE<strong></a>
+  </section>
+
+<footer>
+  <div class="footer-social-container">
+    
+    <button id="social-links-trigger" class="social-icon-trigger" aria-label="Abrir links das redes sociais">
+      <i class="fab fa-instagram"></i>
+    </button>
+
+    <div id="social-links-popup" class="social-links-popup">
+      <a href="https://www.instagram.com/igniteschooloficial/" target="_blank" rel="noopener noreferrer">@igniteschoolbrasil</a>
+      <a href="https://www.instagram.com/adnajovemoficial/" target="_blank" rel="noopener noreferrer">@adnajovemoficial</a>
+      <a href="https://www.instagram.com/adnacuiaba/" target="_blank" rel="noopener noreferrer">@adnacentral</a>
+      <a href="https://www.instagram.com/adnateen/" target="_blank" rel="noopener noreferrer">@adnateen</a>
+    </div>
+
+    <div class="social-links-desktop">
+      <a href="https://www.instagram.com/igniteschooloficial/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visite o Instagram do Ignite School">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@igniteschoolbrasil</span>
+      </a>
+      <a href="https://www.instagram.com/adnajovemoficial/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visite o Instagram da ADNA Jovem">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@adnajovemoficial</span>
+      </a>
+      <a href="https://www.instagram.com/adnacuiaba/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visite o Instagram da ADNA Cuiabá">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@adnacentral</span>
+      </a>
+      <a href="https://www.instagram.com/adnateen/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visite o Instagram da ADNA Teen">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@adnateen</span>
+      </a>
+    </div>
+  </div>
+
+  <p>© 2025 IGNITE Conference. Todos os direitos reservados.</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

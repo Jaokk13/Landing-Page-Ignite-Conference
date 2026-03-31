@@ -1,0 +1,709 @@
+:root {
+  --primary: #FF6B00;
+  --primary-dark: #E05D00;
+  --text: #333333;
+  --bg-light: #F8F8F8;
+  --white: #FFFFFF;
+  --black: #000000;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Header / Navbar */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  height: 80px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.nav-logos-left, .nav-logo-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logos-left .nav-logo-link {
+  margin-right: 1.5rem;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: var(--primary);
+}
+
+/* Estilo para o Botão INSCREVA-SE no Menu */
+.nav-menu .nav-cta {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .nav-cta:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Hero Section */
+.video-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.video-hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.hero-logo {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.btn-veja-mais {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-veja-mais:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(3px);
+}
+
+.btn-veja-mais .fas {
+  margin-left: 0.5rem;
+}
+
+/* Seções Gerais */
+.section {
+  padding: 2rem 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--bg-light);
+}
+
+.imagem-conjunta-section {
+  padding: 2rem 2rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-conjunta {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.cronograma-section {
+    background-color: var(--bg-light);
+}
+
+.faq-section {
+    background-color: var(--white);
+}
+
+.local-section {
+    background-color: var(--bg-light);
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+}
+
+/* Estilos Cronograma Interativo */
+.cronograma-interativo-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs-cronograma {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 2px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #fff5ee;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background-color: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+}
+
+.tab-content-cronograma {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lista-eventos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.evento-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.evento-item:last-child {
+  border-bottom: none;
+}
+
+.horario {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.evento-descricao {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  background: var(--white);
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question .icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question .icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--bg-light);
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  transition: max-height 0.5s ease-in;
+}
+
+.faq-answer p {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+}
+
+/* Mapa */
+.mapa-container {
+  color: var(--primary);
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* CTA Final */
+.cta-section {
+  padding: 4rem 2rem;
+  background: var(--primary);
+  text-align: center;
+}
+
+.btn-inscrever {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  background: var(--white);
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary);
+}
+
+.btn-inscrever:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Rodapé */
+footer {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  margin-top: 0;
+}
+
+.footer-social-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Botão de Gatilho (Ícone principal) */
+.social-icon-trigger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icon-trigger:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* O menu pop-up */
+.social-links-popup {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.social-links-popup.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.social-links-popup a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.social-links-popup a:hover {
+  background-color: var(--primary-dark);
+}
+
+.social-links-desktop {
+  display: none;
+}
+
+.social-links-desktop .social-icon {
+  color: var(--white);
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 180px;
+}
+
+.social-links-desktop .social-icon:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.social-links-desktop .social-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
+/* ============================ */
+/* Responsivo                   */
+/* ============================ */
+@media (min-width: 1025px) {
+  /* Mostra a versão desktop com 4 ícones */
+  .social-links-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+  
+  /* Garante que os outros elementos não apareçam no desktop */
+  .social-icon-trigger,
+  .social-links-popup {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Mostra o botão de gatilho interativo */
+  .social-icon-trigger {
+    display: block;
+  }
+
+  /* Garante que a versão desktop esteja escondida */
+  .social-links-desktop {
+    display: none;
+  }
+
+  /* Outros ajustes de tablet */
+  .main-nav {
+    justify-content: space-between;
+  }
+  .nav-logos-left {
+    margin-right: 1rem;
+  }
+  .nav-menu {
+    gap: 1.5rem;
+  }
+  .nav-logo {
+    height: 35px;
+  }
+  .nav-logo-right img {
+      height: 35px;
+  }
+  .imagem-conjunta {
+    max-width: 90%;
+  }
+  .video-hero {
+    min-height: 400px;
+  }
+  .hero-content {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .hero-logo {
+    max-width: 45%;
+  }
+  .btn-veja-mais {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header Mobile com Logo e Botão */
+  .main-header {
+    padding: 0.8rem 1rem;
+    height: 60px;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-logos-left {
+    display: none;
+  }
+  .nav-logo-right {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-logo-right img {
+    height: 35px;
+  }
+  .nav-menu {
+    display: flex;
+  }
+  .nav-menu li {
+    display: none;
+  }
+  .nav-menu .nav-cta-item {
+    display: block;
+  }
+  .nav-menu .nav-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Outros estilos mobile */
+  .imagem-conjunta-section {
+    padding: 1rem 1rem;
+  }
+  .imagem-conjunta {
+    max-width: 100%;
+  }
+  .video-hero {
+    min-height: 350px;
+  }
+  .hero-content {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  .hero-logo {
+    max-width: 55%;
+  }
+  .btn-veja-mais {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+  }
+  .btn-inscrever {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .faq-question {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .faq-answer p {
+    padding: 1rem;
+  }
+  .mapa-container iframe {
+    height: 300px;
+  }
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+  .horario {
+    font-size: 1rem;
+    width: 80px;
+  }
+  .evento-descricao {
+    font-size: 1rem;
+  }
+  .tab-content-cronograma {
+    padding: 1.5rem;
+  }
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logos-left {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .nav-logos-left .nav-logo-link {
+    margin-right: 0;
+  }
+}
